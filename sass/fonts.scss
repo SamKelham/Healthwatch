@@ -1,0 +1,50 @@
+/* Font Families */
+@font-face {
+    font-family: 'stag_sanssemibold';
+    src: url('fonts/stag_sans-semibold-webfont.eot');
+    src: url('fonts/stag_sans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/stag_sans-semibold-webfont.woff2') format('woff2'),
+         url('fonts/stag_sans-semibold-webfont.woff') format('woff'),
+         url('fonts/stag_sans-semibold-webfont.ttf') format('truetype'),
+         url('fonts/stag_sans-semibold-webfont.svg#stag_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'stag_sanslight';
+    src: url('fonts/stag_sans-light-webfont.eot');
+    src: url('fonts/stag_sans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/stag_sans-light-webfont.woff2') format('woff2'),
+         url('fonts/stag_sans-light-webfont.woff') format('woff'),
+         url('fonts/stag_sans-light-webfont.ttf') format('truetype'),
+         url('fonts/stag_sans-light-webfont.svg#stag_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'stag_sansmedium';
+    src: url('fonts/stag_sans-medium-webfont.eot');
+    src: url('fonts/stag_sans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/stag_sans-medium-webfont.woff2') format('woff2'),
+         url('fonts/stag_sans-medium-webfont.woff') format('woff'),
+         url('fonts/stag_sans-medium-webfont.ttf') format('truetype'),
+         url('fonts/stag_sans-medium-webfont.svg#stag_sansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'stag_sansbook';
+    src: url('fonts/stag_sans-book-webfont.eot');
+    src: url('fonts/stag_sans-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/stag_sans-book-webfont.woff2') format('woff2'),
+         url('fonts/stag_sans-book-webfont.woff') format('woff'),
+         url('fonts/stag_sans-book-webfont.ttf') format('truetype'),
+         url('fonts/stag_sans-book-webfont.svg#stag_sansbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

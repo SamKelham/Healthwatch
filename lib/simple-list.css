@@ -1,0 +1,42 @@
+#viewport{
+	width: 200px; /* Defines the size of the visible part of the carousel
+		Attention : if you only want to see plain items in the viewport,
+		the width of the viewport should take into account of :
+		- the items width
+		- the right and left padding of items
+		- the number of items you want to see in the viewport
+	 */
+	 height:110px;
+	overflow:hidden; /* Hides extra elements, those outside the viewport area */
+}
+#viewport ul{
+	position: relative; /* Enables positionning of elements inside viewport */
+	padding: 0; /* Resets default - User Agent - style */
+}
+#viewport li{
+	width: 180px; /* Defines the size of inner element */
+	height: 100px;
+	float: left; /* Places list items side by side*/
+	list-style: none; /* Resets default - User Agent - style */
+	
+	/* Cosmetic */
+	background-color: none;
+	margin: 0px 10px 10px 10px;
+	padding: 0px;
+	text-align:center;
+}
+
+#viewport li img {
+	border:2px #ffffff solid;
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.3);
+	 box-shadow: 0 5px 10px rgba(0,0,0,.30);
+}
+
+/* Cosmetic */
+#simplePrevious, #simpleNext{
+	cursor: pointer;
+	font-size: 0.8em;
+}
+
+.project_slider div {float:left;}

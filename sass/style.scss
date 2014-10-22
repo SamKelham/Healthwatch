@@ -1,0 +1,474 @@
+/*
+Theme Name: Bespoke theme for HealthWatch Lincolnshire
+Theme URI: http://www.healthwatchlincolnshire.co.uk/
+Description: Custom theme Healthwatch Lincolnshire
+Author: Sam Kelham & Ben Coleman @ LMA
+*/
+
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "fonts.scss";
+
+/* Colours and Base Styles */
+
+$lightgrey: #f1f1f1;
+$bodytext: #333333;
+
+$grey: #c8cacc;
+$blue: #00506b;
+$pink: #e44095;
+$green: #15659d;
+$twitterblue: #16a2d9;
+$facebookblue: #15659d;
+
+
+$bold: 900;
+$bold: normal;
+
+$bodysize: 14px;
+$fontstack: 'stag_sansbook', Arial, Helvetica, sans-serif;
+$fontmedium: 'stag_sansmedium', Arial, Helvetica, sans-serif;
+$boldstack: 900;
+
+@mixin wrapper {
+	width: 100%;
+	float: left;
+	clear: both;
+	height: auto;
+}
+
+@mixin container {
+	width: 960px;
+	margin: 0px auto;
+	height: auto;
+}
+
+@mixin subheading  {
+	font-family: Arial-BoldMT; 
+	font-size: 18px; 
+	color: $pink; 
+	line-height: 21px;
+	padding: 0px 0px 0px 2%;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin bodytext {
+	font-family: $fontstack;
+	font-size: $bodysize;
+	color: $spacegrey;
+	line-height: 22px;
+}
+
+
+/* Styles */
+
+body {
+	margin:0px;
+	text-align:left;
+	font-family: $fontstack;
+	font-size:15px;
+	color:#575756;
+	line-height: 24px;
+	font-weight: 200;
+}
+
+a{
+	border:0px;
+	color:#FFF;
+	text-decoration:none;
+
+	:hover{
+		border:0px;
+		text-decoration:none;
+	}
+}	
+
+h1{
+	margin:10px 0px 0px 0px;
+	color:#fff;
+	font-weight:900;
+	font-size: 53px;
+	color: #FFFFFF;
+	line-height: 63px;
+}
+
+h2,h3,h4,h5,h6{
+	margin:10px 0px 0px 0px;
+	color:#F00;
+	font-weight:400;
+}
+
+h2{
+	font-size: 32px; 
+	line-height: 35px; 
+	margin: 0px 0px 30px 0px; 
+	font-weight: 900; 
+	color: #575756;
+}
+
+h3 {
+	font-size:18px;
+	line-height:20px; 
+	color: $pink;
+}
+
+h4{
+	font-size:16px;
+	line-height:18px;
+}
+
+
+
+
+header {@include wrapper; padding: 30px 0px;}
+.header-container {@include container}
+
+.header-container {
+	.logo {
+		width: 50%;
+		float: left;
+	}
+
+	.header-info {
+		float: right;
+		width: 50%;
+		text-align: right;
+		color: $blue;
+
+		span {color: $pink;}
+		h2 {color: $blue; margin: 0px 0px 0px 0px;}
+		a {color: $blue;}
+	}
+}
+
+.wrapper {@include wrapper}
+.container {@include container}
+
+/* Navigation  */
+
+.navigation {
+	background: #08506a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #08506a 0%, #08506a 50%, #1a5c73 51%, #1a5c73 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08506a), color-stop(50%,#08506a), color-stop(51%,#1a5c73), color-stop(100%,#1a5c73)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #08506a 0%,#08506a 50%,#1a5c73 51%,#1a5c73 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #08506a 0%,#08506a 50%,#1a5c73 51%,#1a5c73 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #08506a 0%,#08506a 50%,#1a5c73 51%,#1a5c73 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #08506a 0%,#08506a 50%,#1a5c73 51%,#1a5c73 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08506a', endColorstr='#1a5c73',GradientType=0 ); /* IE6-9 */
+}
+
+.nav-menu {
+	float: right;
+}
+
+/* menu */
+.primary-navigation{
+	width:100%;
+	float:right;
+	padding:0px;
+
+	ul {
+		padding:0px;
+		margin:0px;
+		width:100%;
+		float:left;
+		list-style-type:none;
+
+		li {
+			list-style-type: none;
+			float: left;
+			width: auto;
+			height: auto;
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+			text-align: center;
+			padding: 0px 30px 0px 0px;
+
+			.current_page_item,
+			.current-menu-ancestor,
+			.current-menu-item,
+			.current-menu-parent {
+				color:#fff;
+
+				a {color:#329999;}
+			}
+
+			:hover a{
+				color:#fff;
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+			}
+
+			:hover > ul {
+				display: block!important;
+				z-index:99;
+			}
+
+			a {
+				float:left;
+				color:#fff;
+				font-family: $fontstack;
+				height:auto;
+				padding: 15px 10px;
+				text-decoration:none;
+				text-align:left;
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+
+				:active {color:#fff;}
+			}
+			a:hover {background-color: $pink;}
+		}
+	}
+
+	/* sub-menu */
+	ul.sub-menu {
+		display:none;
+		position:absolute;
+		clear:both;
+		left:0px;
+		width:195%;
+		height:auto;
+		z-index:99;
+		float:left;
+		margin:37px 0px 0px 0%;
+		padding: 7px 0px 7px 0px;
+		background-color:#fff;
+		@include border-radius(3px);
+
+		li {
+			border:0px;
+			margin:0px 0px 0px 0px;
+			padding:0px 0px 0px 15%;
+			height:auto;
+			width:85%;
+			float:left;
+			clear:both;
+			background-image:none!important;
+			position: relative;
+
+			:hover {
+				background-color: #329999;
+
+				a {
+					color: #fff;
+					-webkit-transition: all 0s ease-in-out;
+					-moz-transition: all 0s ease-in-out;
+					transition: all 0s ease-in-out;
+				} 
+
+			}
+
+			a {
+				float: left;
+				padding: 5px 0px 5px 0px;
+				margin: 0px 0px 0px 0px;
+				height: auto;
+				width: 100%;
+				text-align: left;
+				font-size: 11px;
+				color: #575756;
+				line-height: 11px;
+				-webkit-transition: all 0s ease-in-out;
+				-moz-transition: all 0s ease-in-out;
+				transition: all 0s ease-in-out;
+			}
+		}
+	}
+}
+
+/* Home Page */
+
+.featured-banner {
+	@include wrapper;
+	min-height: 400px;
+
+	h1 {
+		background-color: $pink;
+		padding: 10px;
+		font-size: 36px;
+		width: auto;
+		margin-top: 45px;
+		line-height: 39px;
+		float: left;
+	}
+}
+
+
+/* Posts List Page */
+
+.post {
+	width:100%;
+	float:left;
+	clear:both;
+	padding: 0px 0px 10px 0px;
+	margin:0px 0px 20px 0px;
+
+	.post-title {
+		padding:0px;
+		margin-bottom:10px;
+		border-bottom: 2px solid #f1666f;
+		width:100%;
+		float:left;
+
+		h2 {
+			font-size:20px;
+			padding:10px 0px;
+			margin:0px;
+		}
+
+		a {color: #3d9c9a;} 
+	}
+
+	.post-meta {font-size:12px; width:100%; float:left; clear:both;}
+	.post-entry {float:left; clear:both; width:100%;}
+	.post-navigation {float:left; clear:both;}
+
+	.post-content {
+		float:left;
+		width:70%;
+		position:relative;
+		margin:20px 0px 0px 0px;
+	}
+
+	.post-more {
+		text-decoration:none;
+		color:#f1666f;
+		font-weight: bold;
+		border-bottom: #fff 1px solid;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+
+	:hover {
+		text-decoration: none;
+		border-bottom: #f1666f 1px solid;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+}
+}
+
+
+.post-featured {
+	float: right;
+	width: 25%;
+	margin: 20px 0px 0px 0px;
+
+	img {max-width: 100%; height: auto;}
+}
+
+.next-entries a, .previous-entries a {display:none;}
+.next-entries a:hover, .previous-entries a:hover{color:#fff;}
+
+/* Footer Styles */
+
+.pre-footer {
+	@include wrapper;
+	background-color: $grey;
+	min-height: 100px;
+	padding: 25px 0px;
+	margin-top: 25px;
+
+	h3 {margin: 0px 0px 10px 0px;}
+
+	.widget-container {
+		width: 50%;
+		float: left;
+
+		ul {
+			width: 100%;
+			float: left;
+
+			li {
+				width: 50%;
+				float: left;
+
+				a {
+					color: $bodytext;
+					font-family: $fontmedium;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	@include wrapper;
+	background-color: $blue;
+	color: #fff;
+	padding: 25px 0px;
+	font-family: $fontstack;
+	font-weight: 100;
+	font-size:15px;
+	line-height: 24px;
+	font-weight: 200;
+
+	h3 {display: none;}
+
+	a {color: $twitterblue;}
+
+	.lma {text-align: right;}
+	.disclaimer {@include wrapper; padding: 25px 0px 0px 0px;}
+
+	.widget-container {
+		float: left;
+		width: 50%;
+
+		ul {
+			float: left;
+			width: 100%;
+
+			li {
+				float: left; 
+				clear: none;
+				width: 33%
+			}
+		}
+	}
+}
+
+
+/* WordPress Defaults */
+
+/***** wordpress defaults *****/
+.floatright, .alignright {float:right}
+
+.floatleft, .alignleft {float:left}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.gallery {
+	margin: 0 auto 1.625em;
+}
+dl.gallery-item {
+	margin: 0;
+	float:left;
+
+	img {
+	margin:8px 18px 8px 0px;
+	width:100px;
+	height:100px;
+}
+}
+
+
+
